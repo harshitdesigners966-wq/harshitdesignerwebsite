@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About HARSHIT DESIGNERS — A full-service IT company in Surat, Gujarat. Learn our mission, team, and why we're Surat's trusted digital growth partner." />
+  <title>About Us | HARSHIT DESIGNERS</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ─── TEAM SECTION ─── */
+    .team-card {
+      background: var(--card-bg);
+      border: 1px solid rgba(108,99,255,0.12);
+      border-radius: var(--radius);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .team-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--gradient);
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+      transform-origin: left;
+    }
+    .team-card:hover { transform: translateY(-8px); border-color: rgba(108,99,255,0.35); box-shadow: var(--shadow); }
+    .team-card:hover::before { transform: scaleX(1); }
+    .team-avatar {
+      width: 90px; height: 90px;
+      border-radius: 50%;
+      margin: 0 auto 1.2rem;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem; font-weight: 800;
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+    .team-avatar img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+    .team-avatar-ring {
+      position: absolute; inset: -3px;
+      border-radius: 50%;
+      background: var(--gradient);
+      z-index: -1;
+    }
+    .avatar-a1 { background: linear-gradient(135deg, #6c63ff, #43e97b); }
+    .avatar-a2 { background: linear-gradient(135deg, #ff6584, #ffb347); }
+    .avatar-a3 { background: linear-gradient(135deg, #43e97b, #38f9d7); }
+    .avatar-a4 { background: linear-gradient(135deg, #667eea, #764ba2); }
+    .team-name { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.25rem; color: var(--white); }
+    .team-role { font-size: 0.82rem; font-weight: 600; padding: 0.25rem 0.9rem; border-radius: 50px; background: rgba(108,99,255,0.15); color: var(--primary); display: inline-block; margin-bottom: 0.9rem; }
+    .team-bio { font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1.1rem; }
+    .team-socials { display: flex; justify-content: center; gap: 0.6rem; }
+    .team-socials a { width: 32px; height: 32px; background: rgba(108,99,255,0.1); border: 1px solid rgba(108,99,255,0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; color: var(--text-muted); transition: var(--transition); }
+    .team-socials a:hover { background: var(--primary); color: var(--white); transform: translateY(-2px); }
+    .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.5rem; }
+  </style>
+</head>
+<body>
+
+<!-- ─── NAVBAR ─── -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <div class="container-fluid px-4">
+    <a class="logo navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <img src="img/weblogo.png" alt="HARSHIT DESIGNERS Logo" style="height:52px;width:auto;object-fit:contain;" />
+      <span class="brand-name"><span>HARSHIT</span> DESIGNERS</span>
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="hamburger" id="hamburger"><span></span><span></span><span></span></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="nav-links navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link active">About</a></li>
+        <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        <li class="nav-item"><a href="privacy.html" class="nav-link">Privacy Policy</a></li>
+        <li class="nav-item ms-lg-3"><a href="contact.html" class="nav-cta btn">Get a Quote</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ─── PAGE HERO ─── -->
+<section class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> <span>About Us</span></div>
+  <h1>About <span class="gradient-text">HARSHIT DESIGNERS</span></h1>
+  <p>A passionate team of developers, designers, and strategists committed to your digital success.</p>
+</section>
+
+<!-- ─── STORY ─── -->
+<section class="section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img">
+        <div class="about-img-inner">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80" alt="HARSHIT DESIGNERS office team collaboration" />
+        </div>
+        <div class="about-badge">
+          <div class="num">150+</div>
+          <div class="lbl">Projects Delivered</div>
+        </div>
+      </div>
+      <div class="about-text reveal">
+        <span class="section-tag">Our Story</span>
+        <h2 class="section-title">Built on <span class="gradient-text">Trust, Talent &amp; Technology</span></h2>
+        <p class="lead">At HARSHIT DESIGNERS, we believe that every business deserves a powerful digital presence — regardless of size or industry.</p>
+        <p>Founded and operated from the heart of Surat, Gujarat, we've built our reputation on delivering results-driven digital solutions that are scalable, stunning, and strategically aligned with our clients' goals.</p>
+        <p>Our team of skilled developers, designers, and digital marketers works collaboratively to bring your vision to life — whether you need a high-performance website, a feature-rich mobile app, a cutting-edge AI integration, or a full-funnel digital marketing strategy.</p>
+        <p>We don't just build products; we build <strong>growth engines</strong>. We ask the right questions, study your audience, and craft solutions that convert visitors into loyal customers.</p>
+        <ul class="check-list">
+          <li><span class="ic"><i class="bi bi-check"></i></span> 5+ years of industry expertise</li>
+          <li><span class="ic"><i class="bi bi-check"></i></span> 150+ successful projects delivered</li>
+          <li><span class="ic"><i class="bi bi-check"></i></span> 80+ satisfied clients across Gujarat &amp; India</li>
+          <li><span class="ic"><i class="bi bi-check"></i></span> 100% commitment to quality &amp; timely delivery</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── MISSION / VISION / VALUES ─── -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-tag">What Drives Us</span>
+      <h2 class="section-title">Mission, Vision &amp; <span class="gradient-text">Values</span></h2>
+    </div>
+    <div class="grid-3">
+      <div class="card reveal" style="border-top: 3px solid #6c63ff;">
+        <div class="card-icon">🎯</div>
+        <h3>Our Mission</h3>
+        <p>To empower businesses of all sizes with world-class digital solutions that drive measurable growth, innovation, and long-term success.</p>
+      </div>
+      <div class="card reveal" style="border-top: 3px solid #43e97b;">
+        <div class="card-icon">🔭</div>
+        <h3>Our Vision</h3>
+        <p>To be Gujarat's most trusted digital growth partner — known for delivering impact, not just output, through technology that truly works.</p>
+      </div>
+      <div class="card reveal" style="border-top: 3px solid #ff6584;">
+        <div class="card-icon">💎</div>
+        <h3>Our Values</h3>
+        <p>Transparency, innovation, reliability, and a relentless focus on client satisfaction guide every decision we make and every solution we build.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── WHY CHOOSE US ─── -->
+<section class="section">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-tag">Why Choose Us</span>
+      <h2 class="section-title">The <span class="gradient-text">HARSHIT DESIGNERS</span> Difference</h2>
+      <p class="section-sub">When you choose us, you're not hiring a vendor — you're gaining a dedicated team invested in your long-term success.</p>
+    </div>
+    <div class="grid-2">
+      <div class="card reveal">
+        <div class="card-icon">⚡</div>
+        <h3>Fast Turnaround</h3>
+        <p>We deliver without compromising quality. Our streamlined process ensures on-time delivery every single time.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon">🔒</div>
+        <h3>Transparent Communication</h3>
+        <p>No hidden costs, no surprises. We keep you informed at every stage of the project with clear updates.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon">🧠</div>
+        <h3>Strategy-First Approach</h3>
+        <p>We don't just execute — we think. Every solution is backed by research and aligned with your business goals.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon">🤝</div>
+        <h3>Long-Term Partnership</h3>
+        <p>Our relationship doesn't end at launch. We provide ongoing support to ensure your digital presence keeps growing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TEAM ─── -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-tag">Meet the Team</span>
+      <h2 class="section-title">The People Behind <span class="gradient-text">Your Success</span></h2>
+      <p class="section-sub">A passionate group of developers, designers, and strategists — all working with one goal: to grow your business.</p>
+    </div>
+    <div class="grid-4">
+
+      <!-- Member 1 -->
+      <div class="team-card reveal">
+        <div class="team-avatar avatar-a1">H</div>
+        <div class="team-name">Harshit Godhani</div>
+        <div class="team-role">Founder & CEO</div>
+        <p class="team-bio">Visionary leader with 5+ years of experience in digital strategy, client relations, and technology innovation.</p>
+      </div>
+
+      <!-- Member 2 -->
+      <div class="team-card reveal">
+        <div class="team-avatar avatar-a2">R</div>
+        <div class="team-name">Riya Shah</div>
+        <div class="team-role">Lead UI/UX Designer</div>
+        <p class="team-bio">Creative designer who transforms complex ideas into intuitive, beautiful, and user-first digital experiences.</p>
+      </div>
+
+      <!-- Member 3 -->
+      <div class="team-card reveal">
+        <div class="team-avatar avatar-a3">A</div>
+        <div class="team-name">Arjun Mehta</div>
+        <div class="team-role">Full Stack Developer</div>
+        <p class="team-bio">Expert in building scalable web and mobile applications with clean code, modern frameworks, and rock-solid architecture.</p>
+      </div>
+
+      <!-- Member 4 -->
+      <div class="team-card reveal">
+        <div class="team-avatar avatar-a4">P</div>
+        <div class="team-name">Priya Desai</div>
+        <div class="team-role">Digital Marketing Head</div>
+        <p class="team-bio">Data-driven marketer who crafts high-impact campaigns across SEO, social media, and paid ads to deliver measurable ROI.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── STATS ─── -->
+<section class="stats">
+  <div class="stats-grid">
+    <div class="reveal"><div class="stat-num" data-target="150" data-suffix="+">0+</div><div class="stat-label">Projects Delivered</div></div>
+    <div class="reveal"><div class="stat-num" data-target="80" data-suffix="+">0+</div><div class="stat-label">Happy Clients</div></div>
+    <div class="reveal"><div class="stat-num" data-target="5" data-suffix="+">0+</div><div class="stat-label">Years Experience</div></div>
+    <div class="reveal"><div class="stat-num" data-target="100" data-suffix="%">0%</div><div class="stat-label">Satisfaction Rate</div></div>
+  </div>
+</section>
+
+<!-- ─── CTA ─── -->
+<section class="cta-banner">
+  <div class="container">
+    <h2>Join the Businesses That Trust HARSHIT DESIGNERS to Deliver Results.</h2>
+    <p>Let's build your brand, boost your traffic, and scale your revenue — together.</p>
+    <a href="contact.html" class="btn btn-white"><i class="bi bi-envelope-check"></i> Get in Touch Today</a>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo d-flex align-items-center gap-2">
+          <img src="img/weblogo.png" alt="HARSHIT DESIGNERS" style="height:48px;width:auto;object-fit:contain;" />
+        </a>
+        <p>Your Complete Digital Growth Partner — helping businesses in Surat and across India build, grow, and lead.</p>
+
+      </div>
+      <div class="footer-col"><h4>Quick Links</h4><ul>
+        <li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Services</h4><ul>
+        <li><a href="services.html">Web Development</a></li><li><a href="services.html">App Development</a></li>
+        <li><a href="services.html">AI Solutions</a></li><li><a href="services.html">UI/UX Design</a></li>
+        <li><a href="services.html">Digital Marketing</a></li><li><a href="services.html">Custom Software</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul>
+        <li><a href="tel:+919737052537"><i class="bi bi-telephone"></i> +91 97370 52537</a></li>
+        <li><a href="mailto:harsitdesigners966@gmail.com"><i class="bi bi-envelope"></i> harsitdesigners966@gmail.com</a></li>
+        <li><span style="color:var(--text-muted);font-size:.86rem;line-height:1.6;"><i class="bi bi-geo-alt"></i> 2013-14, Shree Vankar Textile Market, Ring Road, Surat 395002</span></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 HARSHIT DESIGNERS. All rights reserved.</p>
+      <p><a href="privacy.html">Privacy Policy</a></p>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

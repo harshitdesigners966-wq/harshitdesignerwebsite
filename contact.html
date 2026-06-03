@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact HARSHIT DESIGNERS — Get in touch for Web Development, App Development, AI Solutions, and Digital Marketing in Surat, Gujarat. Call +91 97370 52537." />
+  <title>Contact Us | HARSHIT DESIGNERS</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .map-frame { border-radius: var(--radius); overflow: hidden; border: 1px solid rgba(108,99,255,0.15); margin-top: 2rem; }
+    .map-frame iframe { width: 100%; height: 300px; border: none; display: block; }
+    .faq-item { background: var(--card-bg); border: 1px solid rgba(108,99,255,0.12); border-radius: 12px; padding: 1.4rem 1.6rem; margin-bottom: 0.8rem; cursor: pointer; transition: var(--transition); }
+    .faq-item:hover { border-color: rgba(108,99,255,0.3); }
+    .faq-q { display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 0.96rem; }
+    .faq-q i { color: var(--primary); transition: var(--transition); }
+    .faq-a { display: none; color: var(--text-muted); font-size: 0.9rem; margin-top: 0.8rem; line-height: 1.7; }
+    .faq-item.open .faq-a { display: block; }
+    .faq-item.open .faq-q i { transform: rotate(45deg); }
+    /* ─── FORM VALIDATION STYLES ─── */
+    .field-error { border-color: #ff6584 !important; background: rgba(255,101,132,0.05) !important; }
+    .field-success { border-color: #43e97b !important; background: rgba(67,233,123,0.05) !important; }
+    .err-msg { display: none; font-size: 0.78rem; color: #ff6584; margin-top: 0.35rem; padding-left: 0.2rem; animation: fadeInDown 0.2s ease; }
+    .err-msg.show { display: flex; align-items: center; gap: 0.3rem; }
+    .field-wrap { position: relative; }
+    .field-icon { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); font-size: 1rem; pointer-events: none; opacity: 0; transition: var(--transition); }
+    .field-icon.show { opacity: 1; }
+    .field-icon.ok { color: #43e97b; }
+    .field-icon.err { color: #ff6584; }
+    /* ─── SUCCESS CARD ─── */
+    .success-card { display: none; text-align: center; padding: 3rem 2rem; background: var(--card-bg); border-radius: var(--radius); border: 1px solid rgba(67,233,123,0.25); animation: fadeInUp 0.5s ease; }
+    .success-card.show { display: block; }
+    .success-icon { width: 72px; height: 72px; background: rgba(67,233,123,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.2rem; font-size: 2rem; color: #43e97b; border: 2px solid rgba(67,233,123,0.3); }
+    .success-card h4 { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--white); }
+    .success-card p { color: var(--text-muted); font-size: 0.93rem; margin-bottom: 1.5rem; }
+    /* textarea field-icon alignment */
+    .field-wrap.textarea-wrap .field-icon { top: 14px; transform: none; }
+    /* char counter */
+    .char-count { font-size: 0.75rem; color: var(--text-muted); text-align: right; margin-top: 0.25rem; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <div class="container-fluid px-4">
+    <a class="logo navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <img src="img/weblogo.png" alt="HARSHIT DESIGNERS Logo" style="height:52px;width:auto;object-fit:contain;" />
+      <span class="brand-name"><span>HARSHIT</span> DESIGNERS</span>
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="hamburger" id="hamburger"><span></span><span></span><span></span></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="nav-links navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+        <li class="nav-item"><a href="privacy.html" class="nav-link">Privacy Policy</a></li>
+        <li class="nav-item ms-lg-3"><a href="contact.html" class="nav-cta btn">Get a Quote</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> <span>Contact</span></div>
+  <h1>Let's Build Something <span class="gradient-text">Amazing Together</span></h1>
+  <p>Have a project in mind? Reach out today — we respond fast, listen carefully, and deliver with precision.</p>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Contact Info -->
+      <div class="contact-info reveal">
+        <h3>Get in Touch</h3>
+        <p>Whether you're starting from scratch or scaling an existing product, our team is ready to help you take the next step. Let's turn your ideas into results.</p>
+
+        <div class="contact-item">
+          <div class="contact-ic"><i class="bi bi-telephone-fill"></i></div>
+          <div>
+            <h4>Phone / WhatsApp</h4>
+            <a href="tel:+919737052537">+91 97370 52537</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-ic"><i class="bi bi-envelope-fill"></i></div>
+          <div>
+            <h4>Email Address</h4>
+            <a href="mailto:harsitdesigners966@gmail.com">harsitdesigners966@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-ic"><i class="bi bi-geo-alt-fill"></i></div>
+          <div>
+            <h4>Office Address</h4>
+            <span>2nd Floor, 2013–14, Shree Vankar Textile Market,<br/>Ring Road, Surat, Gujarat — 395002</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-ic"><i class="bi bi-clock-fill"></i></div>
+          <div>
+            <h4>Working Hours</h4>
+            <span>Monday – Saturday: 9:00 AM – 7:00 PM</span>
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div class="map-frame">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.8!2d72.8311!3d21.2145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDEyJzUyLjIiTiA3MsKwNDknNTIuMCJF!5e0!3m2!1sen!2sin!4v1"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="HARSHIT DESIGNERS Location Map">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="form-card reveal">
+        <h3 style="font-size:1.3rem;font-weight:700;margin-bottom:0.4rem;">Send Us a Message</h3>
+        <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:1.5rem;">Fill in the form and we'll get back to you within 24 hours.</p>
+
+        <!-- Success State -->
+        <div class="success-card" id="successCard">
+          <div class="success-icon"><i class="bi bi-check-lg"></i></div>
+          <h4>Message Sent Successfully!</h4>
+          <p>Thank you for reaching out. Our team will get back to you within 24 hours.</p>
+          <button onclick="resetForm()" class="btn btn-outline" style="font-size:0.9rem;padding:0.6rem 1.5rem;">Send Another Message</button>
+        </div>
+
+        <!-- Form -->
+        <form id="contactForm" action="https://formspree.io/f/xdavnqen" method="POST" novalidate>
+          <!-- Name + Phone Row -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name <span style="color:#ff6584">*</span></label>
+              <div class="field-wrap">
+                <input type="text" id="name" name="name" placeholder="John Doe" required autocomplete="name" />
+                <i class="field-icon" id="name-ic"></i>
+              </div>
+              <span class="err-msg" id="name-err"><i class="bi bi-exclamation-circle"></i> Please enter your full name.</span>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <div class="field-wrap">
+                <input type="tel" id="phone" name="phone" placeholder="+91 00000 00000" autocomplete="tel" />
+              </div>
+            </div>
+          </div>
+          <!-- Email -->
+          <div class="form-group">
+            <label for="email">Email Address <span style="color:#ff6584">*</span></label>
+            <div class="field-wrap">
+              <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" />
+              <i class="field-icon" id="email-ic"></i>
+            </div>
+            <span class="err-msg" id="email-err"><i class="bi bi-exclamation-circle"></i> Please enter a valid email address.</span>
+          </div>
+          <!-- Service -->
+          <div class="form-group">
+            <label for="service">Service Interested In</label>
+            <select id="service" name="service">
+              <option value="" disabled selected>Select a Service</option>
+              <option>Web Development</option>
+              <option>App Development</option>
+              <option>AI Solutions</option>
+              <option>UI/UX Design</option>
+              <option>Digital Marketing</option>
+              <option>Custom Software Development</option>
+              <option>Other / General Inquiry</option>
+            </select>
+          </div>
+          <!-- Message -->
+          <div class="form-group">
+            <label for="message">Your Message <span style="color:#ff6584">*</span></label>
+            <div class="field-wrap textarea-wrap">
+              <textarea id="message" name="message" placeholder="Tell us about your project, goals, or any questions you have..." required maxlength="1000"></textarea>
+              <i class="field-icon" id="msg-ic" style="top:14px;"></i>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <span class="err-msg" id="msg-err"><i class="bi bi-exclamation-circle"></i> Please enter your message.</span>
+              <span class="char-count" id="charCount">0 / 1000</span>
+            </div>
+          </div>
+          <!-- Submit -->
+          <button type="submit" id="submitBtn" class="btn btn-primary" style="width:100%;justify-content:center;">
+            <i class="bi bi-send"></i> <span id="btnText">Send Message</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FAQ ─── -->
+<section class="section section-alt">
+  <div class="container" style="max-width:760px;">
+    <div class="text-center reveal">
+      <span class="section-tag">FAQs</span>
+      <h2 class="section-title">Quick <span class="gradient-text">Answers</span></h2>
+      <p class="section-sub">Have questions? We've got answers. Still unsure? Just reach out directly.</p>
+    </div>
+    <div class="reveal">
+      <div class="faq-item">
+        <div class="faq-q">How long does a typical project take? <i class="bi bi-plus"></i></div>
+        <div class="faq-a">Timelines vary by project scope. A simple website typically takes 1–2 weeks, while complex apps or software can take 4–12 weeks. We'll give you a clear timeline before we begin.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do you offer post-launch support? <i class="bi bi-plus"></i></div>
+        <div class="faq-a">Absolutely. We offer ongoing maintenance and support packages to ensure your digital product continues to perform at its best after launch.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What is your pricing model? <i class="bi bi-plus"></i></div>
+        <div class="faq-a">We offer project-based pricing tailored to your specific needs. Contact us for a free, no-obligation quote and we'll provide a transparent breakdown.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do you work with startups and small businesses? <i class="bi bi-plus"></i></div>
+        <div class="faq-a">Yes! We love working with startups and SMEs. We tailor our solutions to fit your budget while ensuring premium quality and long-term scalability.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How do we get started? <i class="bi bi-plus"></i></div>
+        <div class="faq-a">Simply fill out the contact form above or call us directly. We'll schedule a free consultation to understand your goals and propose the best solution.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container">
+    <h2>Your Competitors Are Already Online. Don't Fall Behind.</h2>
+    <p>Start your digital transformation today — get a free consultation with our experts.</p>
+    <a href="tel:+919737052537" class="btn btn-white"><i class="bi bi-telephone-fill"></i> Call Us Now: +91 97370 52537</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo d-flex align-items-center gap-2">
+          <img src="img/weblogo.png" alt="HARSHIT DESIGNERS" style="height:48px;width:auto;object-fit:contain;" />
+        </a>
+        <p>Your Complete Digital Growth Partner — helping businesses in Surat and across India build, grow, and lead.</p>
+
+      </div>
+      <div class="footer-col"><h4>Quick Links</h4><ul>
+        <li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Services</h4><ul>
+        <li><a href="services.html">Web Development</a></li><li><a href="services.html">App Development</a></li>
+        <li><a href="services.html">AI Solutions</a></li><li><a href="services.html">UI/UX Design</a></li>
+        <li><a href="services.html">Digital Marketing</a></li><li><a href="services.html">Custom Software</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul>
+        <li><a href="tel:+919737052537"><i class="bi bi-telephone"></i> +91 97370 52537</a></li>
+        <li><a href="mailto:harsitdesigners966@gmail.com"><i class="bi bi-envelope"></i> harsitdesigners966@gmail.com</a></li>
+        <li><span style="color:var(--text-muted);font-size:.86rem;line-height:1.6;"><i class="bi bi-geo-alt"></i> 2013-14, Shree Vankar Textile Market, Ring Road, Surat 395002</span></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 HARSHIT DESIGNERS. All rights reserved.</p>
+      <p><a href="privacy.html">Privacy Policy</a></p>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+  // ─── FAQ TOGGLE ───
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.querySelector('.faq-q').addEventListener('click', () => item.classList.toggle('open'));
+  });
+
+  // ─── HELPERS ───
+  const get = id => document.getElementById(id);
+  const isEmail = v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+
+  function setFieldState(inputId, iconId, errId, valid, errText) {
+    const input = get(inputId);
+    const icon  = get(iconId);
+    const err   = get(errId);
+    input.classList.toggle('field-error', !valid);
+    input.classList.toggle('field-success', valid);
+    if (icon) {
+      icon.className = 'field-icon show ' + (valid ? 'ok bi bi-check-circle-fill' : 'err bi bi-x-circle-fill');
+    }
+    if (err) {
+      if (!valid) { err.querySelector ? null : null; err.classList.add('show'); if (errText) err.innerHTML = '<i class="bi bi-exclamation-circle"></i> ' + errText; }
+      else { err.classList.remove('show'); }
+    }
+    return valid;
+  }
+
+  function clearField(inputId, iconId, errId) {
+    const input = get(inputId);
+    const icon  = get(iconId);
+    const err   = get(errId);
+    input.classList.remove('field-error', 'field-success');
+    if (icon) icon.className = 'field-icon';
+    if (err) err.classList.remove('show');
+  }
+
+  // ─── LIVE CLEAR ON INPUT ───
+  get('name').addEventListener('input', () => clearField('name','name-ic','name-err'));
+  get('email').addEventListener('input', () => clearField('email','email-ic','email-err'));
+  get('message').addEventListener('input', function() {
+    clearField('message','msg-ic','msg-err');
+    get('charCount').textContent = this.value.length + ' / 1000';
+  });
+
+  // ─── FORM SUBMIT VALIDATION ───
+  get('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name    = get('name').value.trim();
+    const email   = get('email').value.trim();
+    const message = get('message').value.trim();
+    let valid = true;
+
+    if (!name) {
+      valid = setFieldState('name','name-ic','name-err', false, 'Please enter your full name.') && valid;
+    } else {
+      setFieldState('name','name-ic','name-err', true);
+    }
+
+    if (!email || !isEmail(email)) {
+      valid = setFieldState('email','email-ic','email-err', false, !email ? 'Email is required.' : 'Enter a valid email address.') && valid;
+    } else {
+      setFieldState('email','email-ic','email-err', true);
+    }
+
+    if (!message) {
+      valid = setFieldState('message','msg-ic','msg-err', false, 'Please enter your message.') && valid;
+    } else {
+      setFieldState('message','msg-ic','msg-err', true);
+    }
+
+    if (!valid) {
+      // Shake the submit button
+      const btn = get('submitBtn');
+      btn.style.animation = 'none';
+      btn.offsetHeight; // reflow
+      btn.style.animation = 'shake 0.4s ease';
+      return;
+    }
+
+    // ─── LOADING STATE ───
+    const btn = get('submitBtn');
+    btn.disabled = true;
+    get('btnText').textContent = 'Sending...';
+    btn.querySelector('i').className = 'bi bi-hourglass-split';
+
+    setTimeout(() => {
+      this.style.display = 'none';
+      get('successCard').classList.add('show');
+    }, 1200);
+  });
+
+  function resetForm() {
+    const form = get('contactForm');
+    form.reset();
+    form.style.display = '';
+    get('successCard').classList.remove('show');
+    ['name','email','message'].forEach(id => {
+      get(id).classList.remove('field-error','field-success');
+    });
+    ['name-ic','email-ic','msg-ic'].forEach(id => { if(get(id)) get(id).className='field-icon'; });
+    ['name-err','email-err','msg-err'].forEach(id => { if(get(id)) get(id).classList.remove('show'); });
+    get('charCount').textContent = '0 / 1000';
+    const btn = get('submitBtn');
+    btn.disabled = false;
+    get('btnText').textContent = 'Send Message';
+    btn.querySelector('i').className = 'bi bi-send';
+  }
+
+  // ─── SHAKE KEYFRAME (injected) ───
+  const style = document.createElement('style');
+  style.textContent = '@keyframes shake { 0%,100%{transform:translateX(0)} 20%{transform:translateX(-6px)} 40%{transform:translateX(6px)} 60%{transform:translateX(-4px)} 80%{transform:translateX(4px)} }';
+  document.head.appendChild(style);
+</script>
+</body>
+</html>
